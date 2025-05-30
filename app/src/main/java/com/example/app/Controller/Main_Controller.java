@@ -14,12 +14,14 @@ public class Main_Controller {
     @Autowired
     private Users_Service users_service;
 
-
+    @Autowired
+    private Final_Query final_query;
+    
     @Autowired
     private User user;
 
     @PostMapping("/testWebhook/JAVA")
-    public ResponseEntity<String> query(){
+    public ResponseEntity<String> query(Request Body final_query){
         return new ResponseEntity<>(users_service.get_query(), HttpStatus.OK);
     }
 
