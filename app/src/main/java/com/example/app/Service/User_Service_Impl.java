@@ -20,7 +20,7 @@ public class User_Service_Impl implements Users_Service {
 
     @Override
     public User add_user(User user) {
-        User u = User.builder().name("John Doe").regNo("REG12347").email("john@example.com").build();
+        User u = User.builder().name(user.getName()).regNo(user.getregNo()).email(user.getemail()).build();
         return u;
     }
 }
